@@ -4,31 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇲🇽 MX 01 - xiaohe
+- name: 🇳🇱 荷兰 (Netherlands) 01 (家宽) - xiaohe
   type: vless
-  server: ul-mexico1.09vpn.com
-  port: 8443
-  uuid: a6d20e79-d326-42c1-bc20-f4cecc6dc42d
+  server: 208.103.161.249
+  port: 80
+  uuid: a3c51f71-ffb5-4c80-a136-cee4b36d6e85
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: ul-mexico1.09vpn.com
   network: ws
   ws-opts:
-    path: /vless/
+    path: /
     headers:
-      Host: ul-mexico1.09vpn.com
+      Host: kAmRaN01-aFgmDQ-1.KaMRan-01.wOrkeRs.DEv
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇲🇽 MX 01 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 01 (家宽) - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇲🇽 MX 01 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 01 (家宽) - xiaohe
 rules:
 - MATCH,PROXIES
